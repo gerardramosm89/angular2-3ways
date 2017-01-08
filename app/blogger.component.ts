@@ -12,8 +12,7 @@ import { Post } from './post.interface';
     `
 })
 export class BloggerComponent implements OnInit {
-
-    blogger = 'Jecelyn';
+    blogger = 'Gerry';
     posts: Post[];
 
     constructor(private _http: Http) { }
@@ -21,7 +20,8 @@ export class BloggerComponent implements OnInit {
     ngOnInit() { 
         this.getPostsByBlogger()
             .subscribe(x => this.posts = x);
-    }
+					console.log("this.posts is: ", this.posts);
+		}
 
     getPostsByBlogger() {
         const url = 'app/assets/mock-posts.json';

@@ -17,27 +17,25 @@ import { Post, GroupPosts } from './post.interface';
     </div>
     `
 })
-export class PostsComponent implements OnInit, OnChanges {
+export class PostsComponent implements OnChanges {
 
     @Input()
     data: Post[];
 
     groupPosts: GroupPosts[];
 
-    ngOnInit() {
-    }
+    constructor() { }
 
     ngOnChanges(changes: SimpleChanges) {
+        // only run when property "data" changed
+        if (changes['data']) {
+            this.groupPosts = this.groupByCategory(this.data);
+        }
     }
 
     groupByCategory(data: Post[]): GroupPosts[] {
-        // our logic to group the posts by category
         if (!data) return;
-
-        // find out all the unique categories
         const categories = new Set(data.map(x => x.category));
-
-        // produce a list of category with its posts
         const result = Array.from(categories).map(x => ({
             category: x,
             posts: data.filter(post => post.category === x)

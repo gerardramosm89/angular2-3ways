@@ -1,8 +1,26 @@
 [
-    { "title": "Learn Angular", "type": "tech" },
-    { "title": "Forrest Gump Reviews", "type": "movie" },
-    { "title": "Yoga Meditation", "type": "lifestyle" },
-    { "title": "What is Promises?", "type": "tech" },
-    { "title": "Star Wars Reviews", "type": "movie" },
-    { "title": "Diving in Komodo", "type": "lifestyle" }
+    {
+        "title": "Learn Angular",
+        "category": "tech"
+    },
+    {
+        "title": "Forrest Gump Reviews",
+        "category": "movie"
+    },
+    {
+        "title": "Yoga Meditation",
+        "category": "lifestyle"
+    },
+    {
+        "title": "What is Promises?",
+        "category": "tech"
+    },
+    {
+        "title": "Star Wars Reviews",
+        "category": "movie"
+    },
+    {
+        "title": "Diving in Komodo",
+        "category": "lifestyle"
+    }
 ]
